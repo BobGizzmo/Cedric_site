@@ -577,5 +577,4 @@ class q2w3_fixed_widget { // Plugin class
 	} // registered_sidebars_filter()
 	
 }
-
 ?>
