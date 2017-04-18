@@ -322,7 +322,7 @@ class q2w3_fixed_widget { // Plugin class
 	
 	public static function admin_menu() {
 		
-		self::$settings_page_hook = add_submenu_page( 'themes.php', __('Fixed Widget Options', 'q2w3-fixed-widget'), __('Fixed Widget Options', 'q2w3-fixed-widget'), 'activate_plugins', 'q2w3_fixed_widget', array( __CLASS__, 'settings_page' ) );
+		self::$settings_page_hook = add_submenu_page( 'themes.php', __('Fixed Widget Options', 'q2w3-fixed-widget'), __('Options Fixed Widget', 'q2w3-fixed-widget'), 'activate_plugins', 'q2w3_fixed_widget', array( __CLASS__, 'settings_page' ) );
 		
 	}
 	
@@ -464,29 +464,29 @@ class q2w3_fixed_widget { // Plugin class
 		
 		echo '<p><span style="display: inline-block; width: 150px;">'. __('Margin Bottom:', 'q2w3-fixed-widget') .'</span><input type="text" name="'. self::ID .'[margin-bottom]" value="'. $options['margin-bottom'] .'" style="width: 50px; text-align: center;" />&nbsp;'. __('px', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
 		
-		echo '<p><span style="display: inline-block; width: 150px;">'. __('Stop ID:', 'q2w3-fixed-widget') .'</span><input type="text" name="'. self::ID .'[stop-id]" value="'. $options['stop-id'] .'" style="width: 150px;">&nbsp;'. __('HTML ID where the widget should stop floating, for example a footer. # - not needed', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
+		echo '<p><span style="display: inline-block; width: 150px;">'. __('ID d\'arret:', 'q2w3-fixed-widget') .'</span><input type="text" name="'. self::ID .'[stop-id]" value="'. $options['stop-id'] .'" style="width: 150px;">&nbsp;'. __('ID du HTML où le widget doit arrêter de flotter, par exemple un pied de page.', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
 			
-		echo '<p><span style="display: inline-block; width: 150px;">'. __('Refresh interval:', 'q2w3-fixed-widget') .'</span><input type="text" name="'. self::ID .'[refresh-interval]" value="'. $options['refresh-interval'] .'" style="width: 50px; text-align: center;" />&nbsp;'. __('milliseconds', 'q2w3-fixed-widget') .' / '. __('Set 0 to disable.', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
+		echo '<p><span style="display: inline-block; width: 150px;">'. __('Intervalle de rafraîchissement:', 'q2w3-fixed-widget') .'</span><input type="text" name="'. self::ID .'[refresh-interval]" value="'. $options['refresh-interval'] .'" style="width: 50px; text-align: center;" />&nbsp;'. __('millisecondes', 'q2w3-fixed-widget') .' / '. __('Mettre 0 pour désactiver.', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
 		
-		echo '<p><span style="display: inline-block; width: 150px;">'. __('Disable plugin if screen width less then:', 'q2w3-fixed-widget') .'</span><input type="text" name="'. self::ID .'[screen-max-width]" value="'. $options['screen-max-width'] .'" style="width: 50px; text-align: center;" />&nbsp;'. __('px', 'q2w3-fixed-widget') .' / '. __('Use this option to disable plugin on portable devices', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
+		echo '<p><span style="display: inline-block; width: 150px;">'. __('Désactive le plugin si l\'écran est plus petit que:', 'q2w3-fixed-widget') .'</span><input type="text" name="'. self::ID .'[screen-max-width]" value="'. $options['screen-max-width'] .'" style="width: 50px; text-align: center;" />&nbsp;'. __('px', 'q2w3-fixed-widget') .' / '. __('Utilisez cette option pour désactiver le plugin sur les smartphones.', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
 				
 	}
 	
 	public static function settings_page_custom_ids_box($options) {
 		
-		echo '<p><span >'. __('Custom HTML IDs (each one on a new line):', 'q2w3-fixed-widget') .'</span><br/><br/><textarea name="'. self::ID .'[custom-ids]" style="width: 320px; height: 120px;">'. $options['custom-ids'] .'</textarea>'.PHP_EOL;
+		echo '<p><span >'. __('ID HTML personnalisés (chacun sur une nouvelle ligne):', 'q2w3-fixed-widget') .'</span><br/><br/><textarea name="'. self::ID .'[custom-ids]" style="width: 320px; height: 120px;">'. $options['custom-ids'] .'</textarea>'.PHP_EOL;
 				
 	}
 	
 	public static function settings_page_compatibility_box($options) {
 	
-		echo '<p><span style="display: inline-block; width: 280px;">'. __('Auto fix widget id:', 'q2w3-fixed-widget') .'</span><input type="checkbox" name="'. self::ID .'[fix-widget-id]" value="yes" '. checked('yes', $options['fix-widget-id'], false) .' /> </p>'.PHP_EOL;
+		echo '<p><span style="display: inline-block; width: 280px;">'. __('Fixer automatiquement l\'ID du widget:', 'q2w3-fixed-widget') .'</span><input type="checkbox" name="'. self::ID .'[fix-widget-id]" value="yes" '. checked('yes', $options['fix-widget-id'], false) .' /> </p>'.PHP_EOL;
 				
-		echo '<p><span style="display: inline-block; width: 280px;">'. __('Enable plugin for logged in users only:', 'q2w3-fixed-widget') .'</span><input type="checkbox" name="'. self::ID .'[logged_in_req]" value="yes" '. checked('yes', $options['logged_in_req'], false) .' /> '. __('Enable this option for debug purposes (frontend problems and etc.)', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
+		echo '<p><span style="display: inline-block; width: 280px;">'. __('Activer le plugin pour les utilisateurs connectés seulement:', 'q2w3-fixed-widget') .'</span><input type="checkbox" name="'. self::ID .'[logged_in_req]" value="yes" '. checked('yes', $options['logged_in_req'], false) .' /> '. __('Activez cette option pour les phases de debug (problèmes de FrontEnd etc.)', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
 				
-		echo '<p><span style="display: inline-block; width: 280px;">'. __('Inherit widget width from the parent container:', 'q2w3-fixed-widget') .'</span><input type="checkbox" name="'. self::ID .'[width-inherit]" value="yes" '. checked('yes', $options['width-inherit'], false) .' /> '. __('Enable this option for themes with responsive sidebar', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
+		echo '<p><span style="display: inline-block; width: 280px;">'. __('Hériter la largeur du widget à partir du conteneur parent:', 'q2w3-fixed-widget') .'</span><input type="checkbox" name="'. self::ID .'[width-inherit]" value="yes" '. checked('yes', $options['width-inherit'], false) .' /> '. __('Activez cette option pour les thèmes avec une barre latérale responsive', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
 				
-		echo '<p><span style="display: inline-block; width: 280px;">'. __('Use jQuery(window).load() hook:', 'q2w3-fixed-widget') .'</span><input type="checkbox" name="'. self::ID .'[window-load-enabled]" value="yes" '. checked('yes', $options['window-load-enabled'], false) .' /> '. __('Enable this option only if you have problems with other scroll oriented javascript code', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
+		echo '<p><span style="display: inline-block; width: 280px;">'. __('Utiliser jQuery(window).load() hook:', 'q2w3-fixed-widget') .'</span><input type="checkbox" name="'. self::ID .'[window-load-enabled]" value="yes" '. checked('yes', $options['window-load-enabled'], false) .' /> '. __('Activez cette option seulement si vous avez des problèmes avec d\'autres scroll orientés Javascript', 'q2w3-fixed-widget') .'</p>'.PHP_EOL;
 				
 		echo '<p><span style="display: inline-block; width: 280px;">'. __('widget_display_callback hook priority:', 'q2w3-fixed-widget') .'</span><select name="'. self::ID .'[widget_display_callback_priority]"><option value="1" '. selected('1', $options['widget_display_callback_priority'], false) .'>1</option><option value="10" '. selected('10', $options['widget_display_callback_priority'], false) .'>10</option><option value="20" '. selected('20', $options['widget_display_callback_priority'], false) .'>20</option><option value="30" '. selected('30', $options['widget_display_callback_priority'], false) .'>30</option><option value="50" '. selected('50', $options['widget_display_callback_priority'], false) .'>50</option><option value="100" '. selected('100', $options['widget_display_callback_priority'], false) .'>100</option></select></p>'.PHP_EOL;
 	
