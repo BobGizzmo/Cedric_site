@@ -100,6 +100,7 @@ add_action( 'admin_action_rd_duplicate_post_as_draft', 'rd_duplicate_post_as_dra
 /*
  * Ajoute le lien "Duplication" dans la liste d'actions de post_row_actions
  */
+
 function rd_duplicate_post_link( $actions, $post ) {
 	if (current_user_can('edit_posts')) {
 		$actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=rd_duplicate_post_as_draft&post=' . $post->ID, basename(__FILE__), 'duplicate_nonce' ) . '" title="Dupliquer cet objet" rel="permalink">Dupliquer</a>';
@@ -416,7 +417,7 @@ class q2w3_fixed_widget { // Plugin class
 				
 		$options = self::load_options();
 						
-		echo '<div class="wrap"><div id="icon-themes" class="icon32"><br /></div><h2>'. __('Fixed Widget Options', 'q2w3-fixed-widget') .'</h2>'.PHP_EOL;
+		echo '<div class="wrap"><div id="icon-themes" class="icon32"><br /></div><h2>'. __(' Options Fixed Widget', 'q2w3-fixed-widget') .'</h2>'.PHP_EOL;
 		
 		if ( isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true' ) { 
 		

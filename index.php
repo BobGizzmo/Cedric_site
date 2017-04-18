@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <div id="container">
-<?php get_sidebar() ?>
 	<div class="content">
 		<?php
 			while (have_posts()) {
