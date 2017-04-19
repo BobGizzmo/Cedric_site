@@ -1,0 +1,140 @@
+# Copyright (C) 2014 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/per-page-add-to\n"
+"POT-Creation-Date: 2015-04-29 17:11:37+00:00\n"
+"PO-Revision-Date: 2015-04-29 19:15+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: perpagehead.php:18
+msgid "Add to head"
+msgstr "Voeg toe aan head tag"
+
+#: perpagehead.php:41
+msgid "Put your head html here"
+msgstr "Plaats je HTML voor de head tag hier"
+
+#: perpagehead.php:104
+msgid "Error reading config file %s! Is this file readable by the webserver?"
+msgstr ""
+"Fout bij het lezen van configuratiebestand %s! Is het bestand leesbaar door "
+"de webserver?"
+
+#: perpagehead.php:118
+msgid "Per Page Add To Head"
+msgstr "Per Page Add To Head"
+
+#: perpagehead.php:124
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Je hebt niet genoeg rechten om bij deze pagina te kunnen"
+
+#: settings.php:15
+msgid "Insert HTML on every page"
+msgstr "Voeg HTML in op elke pagina"
+
+#: settings.php:16
+msgid ""
+"Everything you put in here will be inserted into the &lt;head&gt; tag on "
+"every page. Ideal for favicons!"
+msgstr ""
+"Alles wat je hier toevoegd, zal in de &lt;head&gt; tag op elke pagina worden "
+"toegevoegd"
+
+#: settings.php:24
+msgid "Error creating %s! Is the underlying folder writable?"
+msgstr "Fout bij het maken van %s! Is de onderliggende map schrijfbaar?"
+
+#: settings.php:35
+msgid "Error reading HTML from file %s. Is this file readable?"
+msgstr "Fout bij het lezen van de HTML van %s. Is dit bestand leesbaar?"
+
+#: settings.php:39
+msgid "HTML not updated"
+msgstr "HTML niet bijgewerkt"
+
+#: settings.php:44
+msgid "Succesfully edited %s!"
+msgstr "%s succesvol bewerkt!"
+
+#: settings.php:45
+msgid "Error writing HTML to %s. Is this file writable?"
+msgstr "Fout bij het schrijven van HTML naar %s. Is dit bestand schrijfbaar?"
+
+#: settings.php:116
+msgid "Manage which users can access the plugin"
+msgstr "Beheer gebruikers die toegang hebben tot de plugin"
+
+#: settings.php:120
+msgid "Succesfully updated user role support"
+msgstr "Gebruikersrollen succesvol bijgewerkt"
+
+#: settings.php:122
+msgid "User role support not updated"
+msgstr "Gebruikersrollen niet bijgewerkt"
+
+#: settings.php:135
+msgid "Manage post types that have the per page add to head box"
+msgstr "Beheer pagina's die de per pagina toevoegen aan kop box hebben"
+
+#: settings.php:136
+msgid ""
+"Note: only post types which have their own page (like posts or pages, but "
+"not navigation menu items) are supported"
+msgstr ""
+"Noot: alleen berichttypen die hun eigen pagina hebben (zoals berichten en "
+"pagina's, maar niet navigatiemenu-items) zijn ondersteund"
+
+#: settings.php:140
+msgid "Succesfully updated post type support"
+msgstr "Berichttype ondersteuning succesvol bijgewerkt"
+
+#: settings.php:142
+msgid "Post type support not updated"
+msgstr "Berichttypeondersteuning niet bijgewerkt"
+
+#. Plugin Name of the plugin/theme
+msgid "Per page head"
+msgstr "Per Page Head"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.evona.nl/plugins/per-page-head"
+msgstr "http://www.evona.nl/plugins/per-page-head"
+
+#. Description of the plugin/theme
+msgid ""
+"Allows you to add content into the &lt;head&gt; section for a specific page, "
+"like custom JS or custom HTML, using post meta. Also allows you to add "
+"content for every page, under Settings -> add &lt;head&gt; to every page"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Erik von Asmuth"
+msgstr "Erik von Asmuth"
+
+#. Author URI of the plugin/theme
+msgid "http://evona.nl/about-me/"
+msgstr "http://evona.nl/over-mij/"
+
+#~ msgid "Succesfully updated role support"
+#~ msgstr "Gebruikersrollen succesvol bijgewerkt"
+
+#~ msgid "Role support not updated"
+#~ msgstr "Gebruikersrollen niet bijgewerkt"
+
+#~ msgid "Succesfully updated type support"
+#~ msgstr "Berichttype ondersteuning succesvol bijgewerkt"
+
+#~ msgid "type support not updated"
+#~ msgstr "Berichttypeondersteuning niet bijgewerkt"
+
+#~ msgid "Add &lt;head&gt; to every page"
+#~ msgstr "Voeg &lt;head&gt; toe aan elke pagina"
