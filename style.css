@@ -7,10 +7,10 @@
 /*********************************** HEADER *********************************************/
 
 body{
-	margin: auto;
-	font-family: 'Raleway', sans-serif;
+	margin: auto;													
+	font-family: 'Open Sans', sans-serif;
 }
-#header-barre-top{
+#header-barre-top{														/* STYLE BARRE DE HAUT DE PAGE */
 	z-index: 10;
 	display: flex;
 	flex-direction: inline;
@@ -19,9 +19,9 @@ body{
 	height: 80px;
 	font-size: 1.3em;
 	color: white;
-	background-color: rgba(81, 133, 203, 0.2);
+	background-color: rgba(20, 98, 201, 0.2);
 }
-#blur-div{
+#blur-div{																/* EFFET DE FLOU DERRIERE MENU DE NAVIGATION */
 	z-index: 2;
 	filter: blur(2px);
 	width: 100%;
@@ -31,59 +31,78 @@ body{
 	top: 0;
 	left: 0;
 }
-#header-barre-img{
+#header-barre-img{														/* MISE EN FORME DE LA SIGNATURE DANS LA BARRE HAUT DE PAGE */
 	padding: 3px;
 	padding-left: 25px;
 }
-#header-barre-top ul{
+#header-barre-top ul{													/* MISE EN FORME DE LA LISTE */
 	display: flex;
 	margin: 0;
 	padding: 0;
 	padding-left: 25px;
 }
-#header-barre-top li{
+#header-barre-top li{													/* MISE EN FORME DE ÉLÉMENTS DE LA LISTE */
 	margin-right: 25px;
 	list-style: none;
 	padding-top: 25px
 }
-#header-barre-top li:hover i{
+#header-barre-top li:hover i{											/* MISE EN FORME DES ICONES DE LA LISTE AU SURVOLE*/
 	color: #5185cb;
 	transition: 0.5s;
 }
-i{
+i{																		/* MISE EN FORME DES ICONES DE LA LISTE */
 	margin-right: 10px;
 }
-#header-search{
+#header-search{															/* OUTILS DE RECHERCHE DANS LA BARRE DU HAUT */
 	position: absolute;
 	right: 25px;
 }
-#header-img{
+#header-img{															/* GRANDE IMAGE D'EN-TETE */
 	z-index: 1;
 	width: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
-.primary-menu{
+.primary-menu{															/* STYLISATION DE LA BARRE DE NAVIGATION */
 	position: relative;
 	z-index: 2;
 	font-size: 20px;
 	list-style: none;
 	margin-top: 30px;
 }
-.primary-menu a{
+.primary-menu a{														/* STYLISATION DES LIENS DE LA BARRE DE NAV */
 	text-decoration: none;
 	color: white;
-	font-weight: 600;
 }
-.primary-menu li{
+.primary-menu li{														/* STYLISATION DES ELEMENTS DE LA LISTE */
 	display: inline;
 	padding-right: 25px;
 }
-.primary-menu a:hover{
-	color: #5185cb;
-	transition: 0.5s;
+.primary-menu a{
+ 	position: relative;
+ 	position: relative;
+ 	text-decoration: none;
 }
-.little-line{
+.primary-menu a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: -5px;
+	left: 0;
+	background-color: #5185cb;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+.primary-menu a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+.header-search #searchform{
 	
 }
