@@ -1,0 +1,116 @@
+# Copyright (C) 2015 Per page head
+# This file is distributed under the same license as the Per page head package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Per page head 1.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/per-page-add-to\n"
+"POT-Creation-Date: 2015-04-29 17:11:37+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: perpagehead.php:18
+msgid "Add to head"
+msgstr ""
+
+#: perpagehead.php:41
+msgid "Put your head html here"
+msgstr ""
+
+#: perpagehead.php:104
+msgid "Error reading config file %s! Is this file readable by the webserver?"
+msgstr ""
+
+#: perpagehead.php:118
+msgid "Per Page Add To Head"
+msgstr ""
+
+#: perpagehead.php:124
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: settings.php:15
+msgid "Insert HTML on every page"
+msgstr ""
+
+#: settings.php:16
+msgid ""
+"Everything you put in here will be inserted into the &lt;head&gt; tag on "
+"every page. Ideal for favicons!"
+msgstr ""
+
+#: settings.php:24
+msgid "Error creating %s! Is the underlying folder writable?"
+msgstr ""
+
+#: settings.php:35
+msgid "Error reading HTML from file %s. Is this file readable?"
+msgstr ""
+
+#: settings.php:39
+msgid "HTML not updated"
+msgstr ""
+
+#: settings.php:44
+msgid "Succesfully edited %s!"
+msgstr ""
+
+#: settings.php:45
+msgid "Error writing HTML to %s. Is this file writable?"
+msgstr ""
+
+#: settings.php:116
+msgid "Manage which users can access the plugin"
+msgstr ""
+
+#: settings.php:120
+msgid "Succesfully updated user role support"
+msgstr ""
+
+#: settings.php:122
+msgid "User role support not updated"
+msgstr ""
+
+#: settings.php:135
+msgid "Manage post types that have the per page add to head box"
+msgstr ""
+
+#: settings.php:136
+msgid ""
+"Note: only post types which have their own page (like posts or pages, but "
+"not navigation menu items) are supported"
+msgstr ""
+
+#: settings.php:140
+msgid "Succesfully updated post type support"
+msgstr ""
+
+#: settings.php:142
+msgid "Post type support not updated"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Per page head"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.evona.nl/plugins/per-page-head"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Allows you to add content into the &lt;head&gt; section for a specific page, "
+"like custom JS or custom HTML, using post meta. Also allows you to add "
+"content for every page, under Settings -> add &lt;head&gt; to every page"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Erik von Asmuth"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://evona.nl/about-me/"
+msgstr ""

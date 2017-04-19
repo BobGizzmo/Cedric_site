@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
+<?php session_start(); ?>
 	<!-- HEADER BARRE/TOP NAV ET PHOTO -->
 	<header>
 		<!-- BARRE DU DESSUS -->
