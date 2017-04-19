@@ -597,11 +597,8 @@ if ( ! class_exists( 'tm_clicktotweet' ) ) {
 		}
 
 		public function tm_clicktotweet() {
-			register_activation_hook( __FILE__, array( __CLASS__, 'activation' ) );
-			register_deactivation_hook( __FILE__, array( __CLASS__, 'deactivation' ) );
-
-			// Register global hooks
-			$this->register_global_hooks();
+			register_activation_hook( array( 'activation' ) );
+			
 
 			// Register admin only hooks
 			if(is_admin()) {
@@ -618,26 +615,7 @@ if ( ! class_exists( 'tm_clicktotweet' ) ) {
 			echo '</pre>';
 		}
 
-		/**
-		 * Handles activation tasks, such as registering the uninstall hook.
-		 */
-		public function activation() {
-			register_uninstall_hook( __FILE__, array( __CLASS__, 'uninstall' ) );
-		}
 
-		/**
-		 * Handles deactivation tasks, such as deleting plugin options.
-		 */
-		public function deactivation() {
-
-		}
-
-		/**
-		 * Handles uninstallation tasks, such as deleting plugin options.
-		 */
-		public function uninstall() {
-			delete_option('twitter-handle');
-		}
 
 		/**
 		 * Registers global hooks, these are added to both the admin and front-end.
@@ -681,18 +659,8 @@ if ( ! class_exists( 'tm_clicktotweet' ) ) {
 		}
 
 		public function tinymce_register_plugin($plugin_array) {
-		   $plugin_array['tmclicktotweet'] = plugins_url( "<?php bloginfo('template_url');?>/assets/js/tmclicktotweet_plugin.js", __FILE__);
+		   $plugin_array['tmclicktotweet'] = plugins_url( "<?php bloginfo('template_url');?>/assets/js/tmclicktotweet_plugin.js");
 		   return $plugin_array;
-		}
-
-		/**
-		 * Admin: Add settings link to plugin management page
-		 */
-		public function plugin_settings_link($actions, $file) {
-			if(false !== strpos($file, 'tm-click-to-tweet')) {
-				$actions['settings'] = '<a href="options-general.php?page=tmclicktotweet">Settings</a>';
-			}
-			return $actions;
 		}
 
 		/**
@@ -703,54 +671,7 @@ if ( ! class_exists( 'tm_clicktotweet' ) ) {
 			add_options_page('Click To Tweet Options', 'Click To Tweet', 'manage_options', 'tmclicktotweet', array($this, 'settings_page'));
 		}
 
-		/**
-		 * Admin: Settings page
-		 */
-		public function settings_page() {
-			if ( !current_user_can( 'manage_options' ) )  {
-				wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
-			} ?>
-
-			<div class="wrap">
-
-				<?php screen_icon(); ?>
-				<h2>Click To Tweet</h2>
-
-				<hr/>
-
-				<div style="float:right; margin-left:20px;">
-					<a href="http://coschedule.com/?utm_source=WordPress+Plugin&utm_medium=banner&utm_campaign=WordPress+Plugin" target="_blank">
-						<img src="http://space.todaymade.com/wp-plugins/click-to-tweet-sidebar/coschedule-Sidebar.png" alt="The Better Editorial Calendar For WordPress" />
-					</a>
-				</div>
-
-				<h2>Instructions</h2>
-				<p>
-					To use, simply include the Click to Tweet code in your post. Place your message within the parentheses. Tweet length will be automatically truncated to 120 characters.  <pre>[Tweet "This is a tweet. It is only a tweet."]</pre>
-				</p>
-
-				<h2>Settings</h2>
-
-				<p>Enter your Twitter handle to add "via @yourhandle" to your tweets. Do not include the @ symbol.</p>
-				<form method="post" action="options.php" style="display: inline-block;">
-					<?php settings_fields( 'tmclicktotweet-options' ); ?>
-
-					<table class="form-table">
-		        		<tr valign="top">
-		        			<th style="width: 200px;"><label>Your Twitter Handle</label></th>
-							<td><input type="text" name="twitter-handle" value="<?php echo get_option('twitter-handle'); ?>" /></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td><?php submit_button(); ?></td>
-					</table>
-			 	</form>
-
-			 	<hr/>
-			 	<em>A plugin by <a href="http://coschedule.com" target="_blank">CoSchedule</a> © 2014</em>
-			</div>
-			<?php
-		}
+	
 
 		/**
 		 * Admin: Whitelist the settings used on the settings page
@@ -770,7 +691,7 @@ if ( ! class_exists( 'tm_clicktotweet' ) ) {
 		 * Add CSS needed for styling the plugin
 		 */
 		public function add_css() {
-		    wp_register_style('tm_clicktotweet', plugins_url("<?php bloginfo('template_url');?>/assets/css/styles.css", __FILE__));
+		    wp_register_style('tm_clicktotweet', plugins_url("<?php bloginfo('template_url');?>/assets/css/styles.css"));
 		    wp_enqueue_style('tm_clicktotweet');
 		}
 
